@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 .App {
   text-align: center;
 }
-
+.Body{
+  font-family: 'Poppins';
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -29,6 +32,14 @@
 #buttonLikes{
   background-color: #6A4DBC;
 }
+.Likes{
+  padding-bottom: 5vh;  
+}
+.Prueba{
+  width: 40vw;
+  height: auto;
+  margin-left: 5vw;
+}
 .App-header {
   background-color: #11072f;
   min-height: 100vh;
@@ -39,11 +50,22 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
+.CardsContent{
+  padding-bottom: 5vh;
+}
+.CardsBody{
+  background-color: #6A4DBC;
+  font-family: 'Poppins';
+}
 .App-link {
   color: #61dafb;
 }
-
+.Like{
+  margin-top: -8vh;
+}
+.thumnail{
+  border-radius: 8px;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
