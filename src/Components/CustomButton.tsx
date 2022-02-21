@@ -5,11 +5,12 @@ interface Props {
   color: string;
   children?: React.ReactNode;
   height: string;
-  onClick: () => void;
+  onClick: (ID:number) => void;
   radius: string;
   width: string;
   IconH: string;
   IconW: string;
+  ID: number;
 }
 const Button2: React.FC<Props> = ({
   border,
@@ -21,11 +22,14 @@ const Button2: React.FC<Props> = ({
   width,
   IconH,
   IconW,
+  ID,
 }) => {
+
+
   return (
     <button
       className="Like"
-      onClick={onClick}
+      onClick={() => onClick(ID)}
       style={{
         backgroundColor: color,
         border,
