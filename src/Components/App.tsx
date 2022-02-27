@@ -5,7 +5,8 @@ import { CSSProperties } from "react";
 import { FixedSizeList } from "react-window";
 import { CallAPI, CallLiked } from "../Helpers/ApiCall";
 import SuperHeroesList from "./CustomWindow";
-import LikedSuperHeroesList from "./LikedWindow";
+import LikedSuperHeroesList from "./CustomCards";
+import Pog from "./CustomAccordion";
 // reactstrap components
 import {
   Button,
@@ -93,12 +94,9 @@ function App() {
         </Row>
         <Row>
           <div className="Likes">
-            <Button id="buttonLikes" onClick={toggles}>
-              Liked
-            </Button>
-            <Collapse isOpen={isOpen}>
+            <Pog header="">
               <LikedSuperHeroesList Movies={LikedMovies} onClick={OnClick2} />
-            </Collapse>
+            </Pog>
           </div>
         </Row>
         <Row>
