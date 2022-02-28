@@ -1,5 +1,4 @@
 import React from "react";
-import icon from "../Assets/Images/icon.png";
 interface Props {
   border: string;
   color: string;
@@ -11,6 +10,7 @@ interface Props {
   IconH: string;
   IconW: string;
   ID: number;
+  icon: any;
 }
 const Button2: React.FC<Props> = ({
   border,
@@ -23,6 +23,7 @@ const Button2: React.FC<Props> = ({
   IconH,
   IconW,
   ID,
+  icon,
 }) => {
 
 

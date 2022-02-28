@@ -14,8 +14,9 @@ import ISuperHeroData from "../Types/SuperHero";
 interface Props {
   Movies: Array<ISuperHeroData>;
   onClick: (ID: number) => void | any;
+  icon:any;
 }
-const SuperHeroesList: React.FC<Props> = ({ Movies, onClick }) => {
+const SuperHeroesList: React.FC<Props> = ({ Movies, onClick,icon }) => {
   const Cards: JSX.Element[] = [];
   if (Movies.length > 0) {
     for (let j = 0; j < Movies.length; j++) {
@@ -47,17 +48,18 @@ const SuperHeroesList: React.FC<Props> = ({ Movies, onClick }) => {
                   <Button2
                     border="none"
                     color="#6A4DBC"
-                    height="50px"
+                    height="2.5em"
                     radius="50%"
-                    width="50px"
+                    width="2.5em"
                     IconH="25px"
                     IconW="25px"
                     onClick={(e) => onClick(e)}
-                    ID={Movies[j + i].id}                    
+                    ID={Movies[j + i].id}
+                    icon={icon}                    
                   />
                   <CardBody >                  
                     <div className="Legend" >
-                      <h5>{Movies[j + i].name}</h5>
+                      <h6>{Movies[j + i].name}</h6>
                       {"Real Name: " + Movies[j + i].biography.fullName}
                     </div>
                   </CardBody>
@@ -95,17 +97,18 @@ const SuperHeroesList: React.FC<Props> = ({ Movies, onClick }) => {
                   <Button2
                     border="none"
                     color="#6A4DBC"
-                    height="50px"
+                    height="2.5em"
                     radius="50%"
-                    width="50px"
+                    width="2.5em"
                     IconH="25px"
                     IconW="25px"
                     onClick={(e) => onClick(e)}
-                    ID={Movies[i].id}                    
+                    ID={Movies[i].id}    
+                    icon={icon}                
                   />
                   <CardBody >                  
                     <div className="Legend" >
-                      <h5>{Movies[i].name}</h5>
+                      <h6>{Movies[i].name}</h6>
                       {"Real Name: " + Movies[i].biography.fullName}
                     </div>
                   </CardBody>

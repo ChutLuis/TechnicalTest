@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import "../Assets/CSS/App.css";
 import logo from "../Assets/Images/superheros-logo.png";
 import { CSSProperties } from "react";
@@ -7,6 +7,7 @@ import { CallAPI, CallLiked } from "../Helpers/ApiCall";
 import SuperHeroesList from "./CustomWindow";
 import LikedSuperHeroesList from "./CustomCards";
 import Pog from "./CustomAccordion";
+import filled from "../Assets/Images/filled.png";
 // reactstrap components
 import {
   Button,
@@ -19,12 +20,11 @@ import {
 } from "reactstrap";
 import ISuperHeroData from "../Types/SuperHero";
 function App() {
-  const [isOpen, setIsOpen] = React.useState(false);
   const [Movies, setMovies] = React.useState(Array<ISuperHeroData>());
   const [LikedMovies, setLikedMovies] = React.useState(Array<ISuperHeroData>());
-  const toggles = () => setIsOpen(!isOpen);
   const addLiked = (callMovie: any) => setLikedMovies(callMovie);
   const SetM = (callMovie: any) => setMovies(callMovie);
+
   // Save
   // var datas:number[] = [];
   // localStorage["likedItems"] = JSON.stringify(datas);
@@ -94,13 +94,13 @@ function App() {
         </Row>
         <Row>
           <div className="Likes">
-            <Pog header="">
-              <LikedSuperHeroesList Movies={LikedMovies} onClick={OnClick2} />
+            <Pog header="Liked">
+              <LikedSuperHeroesList Movies={LikedMovies} icon={filled} onClick={OnClick2} />
             </Pog>
           </div>
         </Row>
         <Row>
-          <SuperHeroesList Movies={Movies} onClick={(e) => OnClick(e)} />
+          <SuperHeroesList Movies={Movies} onClick={(e) => OnClick(e)}  />
         </Row>
       </div>
     </>
