@@ -79,8 +79,8 @@ const SuperHeroesList: React.FC<Props> = ({ Movies, onClick,icon }) => {
                     backgroundImage: `url(\"${Movies[i].images.md}\")`,
                     backgroundPosition: "center",
                     backgroundRepeat: "no-repeat",
-                    backgroundSize: "cover",   
-                    borderRadius:"25px"      
+                    backgroundSize: "cover", 
+                    borderRadius:"25px",        
                   }}>
                 <Card       
                   className="CardsBody"           
@@ -103,8 +103,8 @@ const SuperHeroesList: React.FC<Props> = ({ Movies, onClick,icon }) => {
                     IconH="25px"
                     IconW="25px"
                     onClick={(e) => onClick(e)}
-                    ID={Movies[i].id}    
-                    icon={icon}                
+                    ID={Movies[i].id}
+                    icon={icon}                    
                   />
                   <CardBody >                  
                     <div className="Legend" >
